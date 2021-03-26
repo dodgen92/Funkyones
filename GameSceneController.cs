@@ -10,9 +10,9 @@ public class GameSceneController : MonoBehaviour
 
 ///references
     public Camera gameCamera;
-    public Transform levelcontainer;
+    public Transform levelContainer;
 
-    public GameObject piecePrefab
+    public GameObject piecePrefab;
 
 ///internal variables
     private int score;
@@ -43,10 +43,11 @@ public class GameSceneController : MonoBehaviour
                 pieceObject.transform.localPosition = new Vector3(
 
                     ///horizontal
-                    (-boardWidth * pieceSpacing) / 2f +(pieceSpacing / 2f) + x * pieceSpacing
+                    (-boardWidth * pieceSpacing) / 2f +(pieceSpacing / 2f) + x * pieceSpacing,
+
 
                     ///vertical
-                    (-boardHeight * pieceSpacing) / 2f + (pieceSpacing / 2f) + y * pieceSpacing
+                    (-boardHeight * pieceSpacing) / 2f + (pieceSpacing / 2f) + y * pieceSpacing,
                     0
                 );
 
